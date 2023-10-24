@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Company</title>
+    <link rel="stylesheet" type="text/css" href="./style/styleSearch.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Wonach suchst du</h1>
+
+    <section class="search">
+        <form id="searchCompany" method="post">
+           
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01Town">Bezirk</label>
+            <select class="form-select" id="inputGroupSelect01Town" name="town" required>
+              <option selected></option>
+              <option value="Vöcklabruck">Vöcklabruck</option>
+              <option value="Linz">Linz</option>
+              <option value="Wels">Wels</option>
+            </select>
+          </div>
+
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01Job">Branche</label>
+            <select class="form-select" id="inputGroupSelect01Job" name="job" required>
+              <option selected></option>
+              <option value="Kfz">Kfz</option>
+              <option value="Masseur">Masseur</option>
+              <option value="Friseur">Friseur</option>
+            </select>
+          </div>
+            <button type="submit" class="button-78">Suchen</button>
+        </form>
+    </section>
+  <div class="companies" id="results"> <div>
+   
+
+
+<script>   function redirectToUser(){ window.location.href = "user.html";} </script>
+    <script src="./js/search/search.js"></script>
+  <script src="./js/login/userIsLogged.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>

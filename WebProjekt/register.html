@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>register</title>
+        <link rel="stylesheet" type="text/css" href="./style/stylesLogin.css">
+    </head>
+    <body id="loginId">
+        <header>
+            <h1>Willkommen bei der Registrierung</h1>
+
+        </header>
+
+        <h2>Bitte klicken sie ihre Wahl an</h2>
+        <section class="UorK">
+            <button type="button" class="button-64" onclick="toggleVisible1()">Unternehmer</button>
+            <button type="button" class="button-64" onclick="toggleVisible2()">Kunde</button>
+        </section>
+
+        <section id="to_hide" class="not_visible login">
+            <div login>
+                <h2>Hier melden sich Unternehmen an</h2>
+                <form id="company_register" class="row g-3" method="post">
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Firmen Name</label>
+                        <input type="text" name="name" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Adresse</label>
+                        <input type="text" name="place" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label" for="inputGroupSelect01">Bezirk</label>
+                        <select class="form-control" name="town" id="validationDefault01" required>
+                            <option class="form-control" id="validationDefault01" selected></option>
+                            <option value="Vöcklabruck">Vöcklabruck</option>
+                            <option value="Linz">Linz</option>
+                            <option value="Wels">Wels</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label" for="inputGroupSelect01">Branche</label>
+                        <select class="form-control" id="validationDefault01" name="job" required>
+                            <option selected></option>
+                            <option value="Kfz">Kfz</option>
+                            <option value="Masseur">Masseur</option>
+                            <option value="Friseur">Friseur</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Passwort</label>
+                        <input type="password" class="form-control" id="validationDefault01" name="password" value="" required>
+                    </div>
+
+
+                    <div class="centered_button">
+                        <button class="button-64" name="login" type="submit">Registrieren</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+
+        <section id="to_hide" class="not_visible login">
+            <div>
+                <h2>Hier melden sich Kunden an</h2>
+                <form id="user_register" class="row g-3" method="post">
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Email</label>
+                        <input type="text" name="email" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Passwort</label>
+                        <input type="password" class="form-control" id="validationDefault01" name="password" value="" required>
+                    </div>
+                    <div class="centered_button">
+                        <button class="button-64" name="login" type="submit">Registrieren</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+        <footer>
+            
+            <button class="button-64" id="toLogin" type="submit">Zum Login</button>
+        </footer>
+        <script>
+            document.getElementById('toLogin').addEventListener("click",function(event){
+                event.preventDefault();
+                window.location.href="login.html";
+            });
+        </script>
+        <script src="./js/index.js"></script>
+        <script src="./js/login/registerUser.js"></script>
+        <script src="js/login/registerCompany.js"></script>
+    </body>
+</html>

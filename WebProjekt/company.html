@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" type="text/css" href="style/company.css/companyStyle1.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <div id="company_Name"></div>
+        </h1>
+    </header>
+
+    <div id="first_impression">
+
+        <div id="companyImage">
+           
+        </div>
+
+        <div class="button_order">
+            <form id="meetingRequest" method="post">
+                <input type="hidden" name="userId" value="">
+                <input type="hidden" name="companyId" value="">
+                <input type="datetime-local" class="" id="meetingDateTime" name="meetingDateTime">
+                <button class="button-40 " type="submit">Terminanfrage abschicken</button>
+            </form>
+            <button class="button-40 hideUser" type="submit" id="toMeetings">Zu den Terminanfragen</button>
+           <!-- <button class="button-40">Bewerten</button>-->
+            <button id="userSight" class="button-40 hideUser">Hier die Besucheransicht</button>
+            <button id="backToCompanySight" class="button-40">Unternehmeransicht</button>
+
+            <form class="favorite-form" id="markCompany">
+                <input type="hidden" name="companyId" value="">
+                <input type="hidden" name="userId" value="">
+                <button type="submit" class="favorite-btn"></button>
+            </form>
+        </div>
+    </div>
+
+    <form id="uploadPicture" class="hideUser" enctype="multipart/form-data">
+        <input type="hidden" name="companyId" value="">
+        <input type="file" name="imageFile" accept="image/*" required>
+        <button type="submit">Bild hochladen</button>
+    </form>
+
+    <form id="uploadBackroundPicture" class="hideUser" enctype="multipart/form-data">
+        <input type="hidden" name="companyId" value="">
+        <input type="file" name="imageFile2" accept="image/*" required>
+        <button type="submit">Hintergrundbild hochladen</button>
+    </form>
+    
+    
+
+    <section id="companyText">
+        <form method="post" id="first_text">
+            <input type="hidden" name="companyId" value="">
+            <textarea name="message" rows="10" cols="30"></textarea>
+            <button type="submit" maxlength="244">Text speichern</button>
+        </form>
+    </section>
+
+    <footer>
+        <button id="go_Back_search" class="button-40">Zurück zu Suchen</button>
+        <button id="go_Back_main" class="button-40">Zurück zur Übersicht</button>
+        <button id="logout" class="button-40">Logout</button>
+    </footer>
+
+
+
+    
+    <script src="js/cms/saveText.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fülle die companyId-Felder mit dem Wert aus dem Local Storage
+            var companyIdFields = document.querySelectorAll('[name="companyId"]');
+            companyIdFields.forEach(function(field) {
+                field.value = localStorage.getItem('companyId');
+            });
+
+            var userIdFields = document.querySelectorAll('[name="userId"]');
+            userIdFields.forEach(function(field) {
+                field.value = localStorage.getItem('userId');
+            });
+        });
+
+        document.getElementById('toMeetings').addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "companyMeeting.html";
+        });
+       
+    </script>
+
+    <script src="js/cms/showBackroundImage.js"></script> 
+    <script src="js/cms/showImage.js"></script>
+    <script src="js/meetings/requestMeeting.js"></script>
+    <script src="js/cms/uploadPicture.js"></script>
+    <script src="js/favourite/markAsFavourite.js"></script>
+    <script src="js/cms/showText1.js"></script>
+    <script src="js/cms/hide.js"></script>
+    <script src="js/cms/goBackAndLogoutButton.js"></script>
+</body>
+
+</html>

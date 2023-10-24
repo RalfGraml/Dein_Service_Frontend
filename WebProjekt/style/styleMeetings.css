@@ -1,0 +1,78 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+    color: aliceblue;
+    background:url(../img/cool_Backround.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    margin-bottom: 1vh;
+    text-align: center;
+}
+.button{
+    padding: 1%;
+    margin: 0%;
+    min-width: 20vw;
+    height: auto;
+   background-color: rgb(16, 16, 16);
+   color: aliceblue;
+   border-radius: 80px;
+   border-color: rgba(236, 118, 6, 0.736);
+  }
+
+  .button:hover{
+    transform: scale(1.4);
+  }
+
+#collumn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3vh;
+}
+.part{
+    display: flex;
+    background-color: rgba(27, 25, 25, 0.144);
+    flex-direction: column;
+    width: 30vw;
+    margin: 1%;
+}
+
+.meeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px 4px; /* Hier kannst du die Padding-Werte anpassen, um die Größe der Briefmarke zu ändern */
+    background-color:#0908088d;
+    border: 1px solid aliceblue;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1vh;
+    width: 100%;
+    
+    flex-wrap: wrap;
+}
+
+.line {
+    color: aliceblue;
+    display: flex;
+    border-bottom: 1px dotted aliceblue;
+    padding: 4px 0;
+    font-size: 14px;
+    justify-content: center;
+  }

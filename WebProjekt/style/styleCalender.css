@@ -1,0 +1,13 @@
+.my_calender{
+    display: flex;
+}
+.day{
+    display: flex;
+    margin: 2%;
+}
+.selected {
+    background-color: #FFD700; /* Gelbe Hintergrundfarbe für den ausgewählten Tag */
+}
+.selectable {
+    background-color: #ADD8E6; /* Hintergrundfarbe für auswählbare Tage */
+}

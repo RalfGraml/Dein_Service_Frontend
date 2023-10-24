@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Meeting</title>
+    <link rel="stylesheet" type="text/css" href="./style/styleMeetings.css">
+</head>
+<body>
+    <header><h1>Deine Termine</h1></header>
+    
+    <section id="collumn">
+        <section class="part"><h3>Offene Anfragen</h3> <div id="openMeetings"></section>
+        <section class="part"><h3>Absagen</h3><div id="declinedMeetings"></section>
+        <section class="part"><h3>Zusagen</h3><div id="acceptedMeetings"></section>
+    </section>
+   
+    <footer><button class="button" onclick="redirectToUser()">Zur Benutzerseite</button></footer>
+<script>   function redirectToUser(){ window.location.href = "company.html";}
+</script>
+   <script src="js/meetings/companyMeetingNotOpen.js"></script>
+    <script src="js/meetings/companyMeeting.js"></script>
+</body>
+</html>
